@@ -51,6 +51,17 @@ function setupEventListeners() {
     .getElementById('resetColorButton')
     .addEventListener('dblclick', resetBackgroundColor)
 
+  const changeColorButton = document.getElementById('changeColorButton');
+
+  // Attached event listener from read me for mouse over 
+  changeColorButton.addEventListener('mouseover', () => {
+    changeColorButton.style.backgroundColor = 'yellow';
+  });
+  // Attached event listener from read me for mouse out
+  changeColorButton.addEventListener('mouseout', () => {
+    changeColorButton.style.backgroundColor = 'initial'; // resets to default
+  });
+
   // Attach event listener to display key pressed when a key is pressed down
   document.addEventListener('keydown', displayKeyPress)
 
